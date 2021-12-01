@@ -2,9 +2,9 @@
 #include<Servo.h>
 
 Servo Myservo;
-int pos1=150;
-int pos2=105;
-int pos3=195;
+int pos1=150;//going straight
+int pos2=105;//going left
+int pos3=195;//going right
 int speedPin=5;
 int dir1=4;
 int dir2=3;
