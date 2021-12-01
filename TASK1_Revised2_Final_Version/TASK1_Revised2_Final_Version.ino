@@ -2,9 +2,9 @@
 #include<Servo.h>
 
 Servo Myservo;
-int pos1=150;
-int pos2=105;
-int pos3=195;
+int pos1=150;//staright wheels
+int pos2=105;//left wheels
+int pos3=195;//right wheels
 int speedPin=5;
 int dir1=4;
 int dir2=3;
@@ -30,7 +30,7 @@ void loop(){
 
 switch(results.value){
 
-case 0xFF629D:
+case 0xFF629D://up volume button
 Serial.println("up");
 digitalWrite(dir1,HIGH);
 analogWrite(speedPin, mSpeed);
@@ -39,7 +39,7 @@ delay(800);
 break;  
 
       
-case 0xFFC23D:
+case 0xFFC23D://right button
 Serial.println("right");
 digitalWrite(dir1,HIGH);
 analogWrite(speedPin, mSpeed);
@@ -48,7 +48,7 @@ delay(2000);
 break;
 
       
-case 0xFF22DD:
+case 0xFF22DD://left button
 Serial.println("left");
 digitalWrite(dir1,HIGH);
 analogWrite(speedPin, mSpeed);
@@ -57,7 +57,7 @@ delay(2000);
 break;
 
 default:       
-//case 0XFF6897:
+//case 0XFF6897://0 button
 Serial.println("stop");
 digitalWrite(dir1,LOW);
 analogWrite(speedPin, mSpeed);
