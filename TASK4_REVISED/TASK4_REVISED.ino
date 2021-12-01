@@ -1,7 +1,7 @@
 #include<Servo.h>
 Servo Myservo;
-int pos1=150;
-int pos2=105;
+int pos1=150;//going striaght
+int pos2=105;//going left
 int speedPin=5;
 int dir1=4;
 int dir2=3;
